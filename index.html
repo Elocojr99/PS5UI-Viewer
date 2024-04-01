@@ -79,7 +79,7 @@
 </head>
 <body>
     <div id="viewer" style="display: none;">
-        <div class="div" style="display: inline-block; vertical-align: middle;"></div>
+        <img class="icon" src="icons8-user-24.png" alt="Viewer Icon">
         <span class="viewer-count">0</span>
         <span class="watching">Watching</span>
     </div>
@@ -128,10 +128,6 @@
             clearTimeout(viewerBoxTimer);
             viewerBoxTimer = setTimeout(hideViewerBox, 5000); // Hide viewer box after 5 seconds of inactivity
         }
-
-        // Animation code provided by OnlineWebFonts_Com
-        const animation = __Animations['243360'];
-        document.querySelector('.div').innerHTML = animation;
     </script>
 </body>
 </html>
