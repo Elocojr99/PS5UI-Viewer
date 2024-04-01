@@ -60,6 +60,21 @@
                 transform: scale(1.1);
             }
         }
+        .test-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .test-button:hover {
+            background-color: #3c78d8;
+        }
     </style>
 </head>
 <body>
@@ -69,7 +84,8 @@
         <span class="watching">Watching</span>
     </div>
 
-    <script src="https://unpkg.com/comfy.js@1.1.16/dist/comfy.min.js"></script>
+    <button class="test-button" onclick="simulateViewerUpdate()">Test Viewer Count</button>
+
     <script>
         let viewerCount = 0;
         let viewerBoxVisible = false;
@@ -105,14 +121,13 @@
             }
         }
 
-        ComfyJS.Init("Yizfe"); // Replace "YourChannel" with your actual channel name
-
-        ComfyJS.onViewerUpdated = (viewers) => {
-            updateViewerCount(viewers);
+        function simulateViewerUpdate() {
+            const randomCount = Math.floor(Math.random() * 1000); // Generate random viewer count
+            updateViewerCount(randomCount);
             showViewerBox();
             clearTimeout(viewerBoxTimer);
             viewerBoxTimer = setTimeout(hideViewerBox, 5000); // Hide viewer box after 5 seconds of inactivity
-        };
+        }
     </script>
 </body>
 </html>
