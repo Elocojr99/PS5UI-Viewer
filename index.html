@@ -40,14 +40,14 @@
         .icon-box {
             width: 30px;
             height: 30px;
-            border-radius: 50%;
+            border-radius: 50%; /* Make it circular */
             margin-right: 10px;
             overflow: hidden; /* Hide overflowing parts */
-            background-color: red;
         }
         .icon {
             width: 100%; /* Fill the container */
-            height: auto; /* Maintain aspect ratio */
+            height: 100%; /* Fill the container */
+            object-fit: cover; /* Ensure the image covers the entire space */
         }
         .viewer-count {
             font-size: 1.2em;
