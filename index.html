@@ -20,7 +20,7 @@
             display: flex;
             align-items: center;
             padding: 10px;
-            background-color: #00008b; /* Dark blue background color */
+            background: linear-gradient(to right, #2d74c8, #845ec2); /* PS5 notification overlay colors */
             color: white; /* White text color */
             border-radius: 20px;
             box-shadow: 0 2px 4px rgba(128, 0, 128);
@@ -42,15 +42,11 @@
             height: 30px;
             border-radius: 50%;
             margin-right: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: white; /* White background color */
+            overflow: hidden; /* Hide overflow to remove the border */
         }
         .icon {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
+            width: 30px;
+            height: 30px;
         }
         .viewer-count {
             font-size: 1.2em;
